@@ -1,0 +1,88 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url(../Images/bg.jpg) center no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.home-heading {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #63b8ff;
+    padding: 0 3rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    border-bottom: 0.3rem solid #fff;
+    text-shadow: 0.2rem 0.2rem 1rem #555;
+    transform: skew(-10deg);
+}
+
+.home-person-img {
+    width: 25rem;
+    height: 25rem;
+    padding: 0.5rem;
+    opacity: 0.9;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.7rem dotted #63b8ff;
+}
+
+.home-person-name {
+    padding: 0.5rem 3rem;
+    font-size: 2rem;
+    background-color: #63b8ff;
+    color: #fff;
+    margin: 5rem 0;
+    transform: skew(-10deg);
+    letter-spacing: 0.3rem;
+}
+
+.home-btn {
+    border: 0.3rem solid #313b4f;
+    font-size: 1.7rem;
+    color: #313b4f;
+    text-transform: uppercase;
+    background-color: #fff;
+    letter-spacing: 0.3rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+}
+
+.home-btn:hover {
+    color: #fff;
+    background-color: #63b8ff;
+}
+
+
+@media (max-width: 920px) {
+    .home-heading {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-heading {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 516px) {
+    .home-heading {
+        font-size: 2.0rem;
+    }
+}
+
+@media (max-width: 331px) {
+    .home-heading {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 290px) {
+    .home-heading {
+        font-size: 1.3rem;
+    }
+}
