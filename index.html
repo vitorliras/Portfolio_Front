@@ -7,7 +7,7 @@
     <title>Portfolio Website</title>
 
     <link rel="stylesheet" href="Stylesheets/style.css" />
-    <link rel="stylesheet" href="Stylesheets/headerAndFooter.css" />
+    <link rel="stylesheet" href="Stylesheets/navbar.css" />
     <link rel="stylesheet" href="Stylesheets/home.css" />
     <link rel="stylesheet" href="Stylesheets/aboutme.css" />
     <link rel="stylesheet" href="Stylesheets/projects.css" />
@@ -19,13 +19,21 @@
 
 <body>
     <div class="container">
-        <section class="home center" id="home">
+
+        <div class="home center" id="home">
             <h1 class="home-heading">Desenvolvedor Web</h1>
             <img src="images/me.jpg" alt="Vitor Lira" class="home-person-img" />
             <h3 class="home-person-name">Vitor Lira</h3>
-            
             <a href="" class="home-btn">Saiba Mais</a>
-        </section>
+        </div>
+
+        <div class="navbar center">
+            <a href="#home" class="navbar-link">Início</a>
+            <a href="#about" class="navbar-link">Sobre</a>
+            <a href="#project" class="navbar-link">Projetos</a>
+            <a href="#contact" class="navbar-link">Contato</a>
+        </div>
+
     </div>
     <script src="script.js"></script>
 </body>
