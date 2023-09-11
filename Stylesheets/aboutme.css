@@ -1,0 +1,258 @@
+.about{
+    width: 100%;
+    height: 100%;
+    padding: 15rem 0 10rem 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card-progress{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .about-progress-bars-wrapper {
+    margin-bottom: 10rem;
+    padding: 10rem 6rem;
+  }
+  
+  .about-progress-bar {
+    width: 60rem;
+    height: 3rem;
+    background-color: #ccc;
+    margin: 1.5rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 1rem #555;
+    position: relative;
+  }
+  
+  .about-progress-text {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .about-progress-text span {
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .about-progress-percent {
+    width: 0;
+    height: 100%;
+    background-color: #63b8ff;
+    border-radius: 0.3rem;
+    transition: width 0.5s 0.5s ease-in-out;
+  }
+  
+  .about-services {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .about-service {
+    text-align: center;
+  }
+  
+  .about-service:first-child,
+  .about-service:last-child {
+    align-self: flex-start;
+  }
+  
+  .about-service i {
+    font-size: 10rem;
+    color: #63b8ff;
+    margin-bottom: 2rem;
+    text-shadow: 0.1rem 0.1rem 0.5rem #555;
+  }
+  
+  .about-service h2 {
+    font-size: 2rem;
+    color: #fff;
+    background-color: #63b8ff;
+    width: 25rem;
+    letter-spacing: 0.3rem;
+    transform: skew(-10deg);
+    box-shadow: 0.2rem 0.2rem 0.5rem #555;
+  }
+
+  .card {
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 0;
+    
+  }
+  
+  .card-about {
+    width: 35rem;
+    background-color: #dff0ff;
+    padding: 1rem 1rem 2rem 1rem;
+    box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
+    position: relative;
+    opacity: 0.7;
+    transition: opacity 0.5s;
+  }
+  
+  .card-about:hover {
+    opacity: 1;
+  }
+  
+  .card-about:first-child {
+    align-self: flex-start;
+  }
+  
+  .card-about:last-child {
+    align-self: flex-end;
+  }
+  
+  .card-about-img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .card-about-name {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #313b4f;
+    margin-top: 2rem;
+  }
+  
+  .card-about-name span {
+    font-size: 1.7rem;
+  }
+  
+  .card-about-skills {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 2rem 0;
+  }
+  
+  .card-about-skills li {
+    font-size: 1.5rem;
+    color: #313b4f;
+  }
+  
+  .about-projects-btn {
+    background-color: #313b4f;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  .about-story-btn {
+    width: 4rem;
+    height: 4rem;
+    background-color: #313b4f;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    border-radius: 5rem;
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    transition: transform 0.5s;
+    z-index: 50;
+    cursor: pointer;
+  }
+  
+  .change.about-story-btn {
+    transform: rotate(405deg);
+  }
+  
+  .about-story-btn-line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #fff;
+  }
+  
+  .about-story {
+    width: 100%;
+    height: 100%;
+    background-color: #63b8ff;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    transform: scale(0);
+    transform-origin: top right;
+    border-radius: 50rem 0 50rem 50rem;
+    transition: all 0.5s;
+  }
+  
+  .change.about-story {
+    transform: scale(1);
+    border-radius: 0;
+  }
+  
+  .about-story-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  
+  .about-story-paragraph {
+    font-size: 1.8rem;
+    color: #eee;
+    text-align: justify;
+    letter-spacing: 0.1rem;
+    text-indent: 2rem;
+  }
+
+  @media (max-width: 1090px) {
+    .about-card-progress{
+      display: block;
+      justify-content: center;
+    }
+
+    .card{
+      display: flex;
+      justify-content: center;
+      padding:  0;  
+    }
+    .about-services {
+      height: auto;
+      flex-wrap: wrap;
+    }
+  
+    .about-service {
+      margin: 3rem 2rem;
+    }
+  
+}
+
+@media (max-width: 800px) {
+  .about-progress-bar {
+    width: 50rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-progress-bar {
+    width: 45rem;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .about-progress-bar {
+    width: 40rem;
+  }
+  .card{
+    margin-top: -200px;
+
+  }
+}

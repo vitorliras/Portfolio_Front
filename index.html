@@ -2,40 +2,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Website</title>
 
-    <link rel="stylesheet" href="Stylesheets/style.css" />
-    <link rel="stylesheet" href="Stylesheets/navbar.css" />
-    <link rel="stylesheet" href="Stylesheets/home.css" />
-    <link rel="stylesheet" href="Stylesheets/aboutme.css" />
-    <link rel="stylesheet" href="Stylesheets/projects.css" />
-    <link rel="stylesheet" href="Stylesheets/contact.css" />
+  <link rel="stylesheet" href="Stylesheets/style.css" />
+  <link rel="stylesheet" href="Stylesheets/navbar.css" />
+  <link rel="stylesheet" href="Stylesheets/home.css" />
+  <link rel="stylesheet" href="Stylesheets/aboutme.css" />
+  <link rel="stylesheet" href="Stylesheets/projects.css" />
+  <link rel="stylesheet" href="Stylesheets/contact.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
-    <div class="container">
+  <div class="container">
 
-        <div class="home center" id="home">
-            <h1 class="home-heading">Desenvolvedor Web</h1>
-            <img src="images/me.jpg" alt="Vitor Lira" class="home-person-img" />
-            <h3 class="home-person-name">Vitor Lira</h3>
-            <a href="" class="home-btn">Saiba Mais</a>
-        </div>
+    <section class="home center" id="home">
+      <h1 class="home-heading">Desenvolvedor Web</h1>
+      <img src="images/me.jpg" alt="Vitor Lira" class="home-person-img" />
+      <h3 class="home-person-name">Vitor Lira</h3>
+      <a href="#about" class="home-btn">Saiba Mais</a>
+    </section>
 
-        <div class="navbar center">
-            <a href="#home" class="navbar-link">Início</a>
-            <a href="#about" class="navbar-link">Sobre</a>
-            <a href="#project" class="navbar-link">Projetos</a>
-            <a href="#contact" class="navbar-link">Contato</a>
-        </div>
-
+    <div class="navbar center">
+      <a href="#home" class="navbar-link">Início</a>
+      <a href="#about" class="navbar-link">Sobre</a>
+      <a href="#project" class="navbar-link">Projetos</a>
+      <a href="#contact" class="navbar-link">Contato</a>
     </div>
-    <script src="script.js"></script>
+
+    <section class="about" id="about">
+      <h1 class="section-heading about-heading">Sobre Mim</h1>
+      <div class="about-card-progress">
+        <div class="card">
+          <div class="card-about">
+            <img src="images/me.jpg" class="card-about-img">
+            <h2 class="card-about-name">Vitor Lira <span>(Desenvolvedor)</span></h2>
+            <ul class="card-about-skills">
+              <li>JavaScript</li>
+              <li>ReactJS</li>
+              <li>.NET</li>
+              <li>c#</li>
+              <li>JQuery</li>
+            </ul>
+            <a href="#projects" class="about-projects-btn">Projetos</a>
+            <div class="about-story-btn" title="Minha História">
+              <div class="about-story-btn-line"></div>
+            </div>
+            <div class="about-story">
+              <h4 class="about-story-heading">Sobre Mim</h4>
+              <p class="about-story-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit obcaecati
+                blanditiis aspernatur ab doloribus optio nesciunt adipisci fugiat quia veritatis doloremque tempore ipsum
+                sunt atque exercitationem perspiciatis, beatae aliquam voluptates perferendis. Doloribus exercitationem
+                adipisci, quidem veritatis temporibus magni. Sunt, exercitationem?</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-progress-bars-wrapper">
+          <div class="about-progress-bar">
+            <p class="about-progress-text">
+              HTML
+              <span></span>%
+            </p>
+            <div class="about-progress-percent"></div>
+          </div>
+          <div class="about-progress-bar">
+            <p class="about-progress-text">
+              CSS
+              <span></span>%
+            </p>
+            <div class="about-progress-percent"></div>
+          </div>
+          <div class="about-progress-bar">
+            <p class="about-progress-text">
+              JavaScript
+              <span></span>%
+            </p>
+            <div class="about-progress-percent"></div>
+          </div>
+          <div class="about-progress-bar">
+            <p class="about-progress-text">
+              Jquery
+              <span></span>%
+            </p>
+            <div class="about-progress-percent"></div>
+          </div>
+          <div class="about-progress-bar">
+            <p class="about-progress-text">
+              ReactJS
+              <span></span>%
+            </p>
+            <div class="about-progress-percent"></div>
+          </div>
+          <div class="about-progress-bar">
+            <p class="about-progress-text">
+              NodeJS
+              <span></span>%
+            </p>
+            <div class="about-progress-percent"></div>
+          </div>
+          <div class="about-progress-bar">
+            <p class="about-progress-text">
+              Angular
+              <span></span>%
+            </p>
+            <div class="about-progress-percent"></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-services">
+        <div class="about-service">
+          <i class="far fa-lightbulb"></i>
+          <h2 class="about-service-heading">Criativo</h2>
+        </div>
+        <div class="about-service">
+          <i class="fas fa-cut"></i>
+          <h2 class="about-service-heading">Soluciona Problemas</h2>
+        </div>
+        <div class="about-service">
+          <i class="fas fa-tachometer-alt"></i>
+          <h2 class="about-service-heading">Ágil</h2>
+        </div>
+        <div class="about-service">
+          <i class="fas fa-rocket"></i>
+          <h2 class="about-service-heading">Dinâmico</h2>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
