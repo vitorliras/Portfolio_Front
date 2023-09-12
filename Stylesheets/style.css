@@ -20,9 +20,9 @@
     align-items: center;
   }
   
-  .section-heading {
+  .title {
     font-size: 5rem;
-    color: #333;
+    color: #313b4f;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     border-bottom: 0.3rem solid #333;
