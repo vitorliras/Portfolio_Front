@@ -37,6 +37,28 @@ document.querySelectorAll('.about-story-btn').forEach(btn => {
   })
 })
 
+// Função de inicialização do mapa
+function initMap() {
+  // Coordenadas aleatórias em Recife, PE (substitua por coordenadas reais)
+  var myLatLng = { lat: -8.047562, lng: -34.878044 };
+
+  // Opções do mapa
+  var mapOptions = {
+      zoom: 15,
+      center: myLatLng
+  };
+
+  // Crie o mapa e coloque-o na div com a classe "map-container"
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  // Marque um marcador no local
+  var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Local Aleatório em Recife, PE'
+  });
+}
+
 // Adiciona um ouvinte de evento para a janela que fica à escuta do evento de redimensionamento (resize).
 window.addEventListener("resize", () => {
   // Quando ocorrer um redimensionamento da janela, recarrega a página.
