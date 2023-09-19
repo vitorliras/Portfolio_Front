@@ -1,8 +1,10 @@
-// Seleciona o elemento HTML com a classe "about-progress-bars-wrapper" e armazena-o na variável 'progress'.
+//Usei o chat gpt para comentar algumas linhas e deixa mais bem explicado possivel
 const progress = document.querySelector(".about-progress-bars-wrapper");
-
-// Cria um array chamado 'progressBarPercents' que contém valores numéricos representando porcentagens.
 const progressBarPercents = [97, 89, 85, 87, 80, 60, 35];
+const navbar = document.querySelector(".navbar");
+const navbarOffsetTop = navbar.offsetTop;
+const sections = document.querySelectorAll("section");
+const navbarLinks = document.querySelectorAll(".navbar-link");
 
 // Adiciona um ouvinte de evento para a janela que fica à escuta do evento de rolagem (scroll).
 window.addEventListener("scroll", () => {
@@ -11,6 +13,30 @@ window.addEventListener("scroll", () => {
 
 // Define uma função chamada 'mainFn'.
 const mainFn = () => {
+
+  // Verifica se o deslocamento vertical da janela é maior ou igual à posição em que a barra de navegação deve se tornar "sticky".
+if (window.pageYOffset >= navbarOffsetTop) {
+  // Se a condição for verdadeira, adiciona a classe "sticky" à barra de navegação.
+  navbar.classList.add("sticky");
+} else {
+  // Se a condição for falsa, remove a classe "sticky" da barra de navegação.
+  navbar.classList.remove("sticky");
+}
+
+// Itera sobre um conjunto de seções na página, fornecendo a seção e seu índice (i).
+sections.forEach((section, i) => {
+  // Verifica se o deslocamento vertical da janela é maior ou igual à posição vertical da seção, com uma folga de 10 pixels.
+  if (window.pageYOffset >= section.offsetTop - 10) {
+      // Remove a classe "change" de todos os elementos da barra de navegação (navbarLinks).
+      navbarLinks.forEach((navbarLink) => {
+          navbarLink.classList.remove("change");
+      });
+      // Adiciona a classe "change" apenas ao link de navegação correspondente à seção atualmente visível.
+      navbarLinks[i].classList.add("change");
+  }
+});
+
+
   // Verifica se a posição vertical da janela mais a altura da janela é maior ou igual à posição vertical do elemento 'progress'.
   if (window.pageYOffset + window.innerHeight >= progress.offsetTop) {
     // Se a condição for verdadeira, itera sobre todos os elementos com a classe "about-progress-percent".
@@ -37,27 +63,6 @@ document.querySelectorAll('.about-story-btn').forEach(btn => {
   })
 })
 
-// Função de inicialização do mapa
-function initMap() {
-  // Coordenadas aleatórias em Recife, PE (substitua por coordenadas reais)
-  var myLatLng = { lat: -8.047562, lng: -34.878044 };
-
-  // Opções do mapa
-  var mapOptions = {
-      zoom: 15,
-      center: myLatLng
-  };
-
-  // Crie o mapa e coloque-o na div com a classe "map-container"
-  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-  // Marque um marcador no local
-  var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Local Aleatório em Recife, PE'
-  });
-}
 
 // Adiciona um ouvinte de evento para a janela que fica à escuta do evento de redimensionamento (resize).
 window.addEventListener("resize", () => {

@@ -39,6 +39,11 @@
     width: 100%;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+  }
+
 @media (max-width: 650px) {
     .navbar-link {
         margin: 0 2rem;
