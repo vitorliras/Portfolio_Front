@@ -1,6 +1,6 @@
 //Usei o chat gpt para comentar algumas linhas e deixa mais bem explicado possivel
 const progress = document.querySelector(".about-progress-bars-wrapper");
-const progressBarPercents = [97, 89, 85, 87, 80, 60, 35];
+const progressBarPercents = [75,78, 88, 86, 85, 79, 80, 60, 35];
 const navbar = document.querySelector(".navbar");
 const navbarOffsetTop = navbar.offsetTop;
 const sections = document.querySelectorAll("section");
@@ -62,7 +62,6 @@ document.querySelectorAll('.about-story-btn').forEach(btn => {
       btn.nextElementSibling.classList.toggle('change')
   })
 })
-
 
 // Adiciona um ouvinte de evento para a janela que fica à escuta do evento de redimensionamento (resize).
 window.addEventListener("resize", () => {
